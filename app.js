@@ -14,5 +14,14 @@ function adicionarAmigo() {
     }
 }
 
-
+function sortearAmigo() {
+    if (amigosX.length === 0) {
+        alert("Nenhum amigo adicionado para sortear.");
+    } else {
+        let indiceSorteado = Math.floor(Math.random() * amigosX.length);
+        console.log(indiceSorteado);
+        let amigoSorteado = amigosX[indiceSorteado];
+        document.getElementById("resultado").textContent = "O amigo sorteado foi: " + amigoSorteado;
+    }
+}
 
