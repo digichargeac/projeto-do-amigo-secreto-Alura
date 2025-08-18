@@ -25,3 +25,8 @@ function sortearAmigo() {
     }
 }
 
+function reiniciarSorteio() {
+    amigosX = [];
+    document.getElementById("listaAmigos").innerHTML = "";
+    document.getElementById("resultado").textContent = "";
+}
