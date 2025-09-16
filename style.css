@@ -1,6 +1,6 @@
 :root {
-    --color-primary: #4B69FD;
-    --color-secondary: #FFF9EB;
+    --color-primary: #5c5f6f;
+    --color-secondary: #6187e8;
     --color-tertiary: #C4C4C4;
     --color-button: #fe652b;
     --color-button-hover: #e55720;
@@ -21,6 +21,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .main-content {
@@ -28,23 +29,32 @@ body {
     flex-direction: column;
     height: 100%;
     width: 100%;
+    overflow-y: auto;
 }
 
 /* Banner */
 .header-banner {
     flex: 40%;
     display: flex;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    padding: 40px 0 0;
+    padding: 20px 20px 20px 20px;
+    height: auto;
 }
+
+.imagem-cabecalho {
+    border: var(--color-text) 4px solid;
+    border-radius: 20%;
+}
+
 
 /* Seção de entrada */
 .input-section {
     flex: 60%;
     background-color: var(--color-secondary);
     border: 1px solid #000;
-    border-radius: 64px 64px 0 0;
+    border-radius: 64px 64px 64px 64px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,15 +69,17 @@ body {
     font-weight: 900;
     font-style: italic;
     color: var(--color-white);
+    text-shadow: 4px 4px 8px #000000;
 }
 
 .section-title {
     font-family: "Inter", serif;
     font-size: 36px;
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--color-tertiary);
     margin: 10px 0;
     text-align: center;
+    text-shadow: 4px 4px 8px #534d4d;
 }
 
 /* Contêineres de entrada e botão */
@@ -85,6 +97,8 @@ body {
     border: 2px solid #000;
     border-radius: 25px 0 0 25px;
     font-size: 16px;
+    border-style: inset;
+    background-color: #b3d9f8;
 }
 
 .button-container {
@@ -109,10 +123,16 @@ button {
     padding: 15px 30px;
     font-family: "Inter", sans-serif;
     font-size: 16px;
-    border: 2px solid #000;
+    border: 2px outset #000;
+    border-color: #000000 #000000 #42a4f4 #42a4f4;
     border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(18, 18, 18, 0.3);
     cursor: pointer;
+}
+
+button:active {
+    box-shadow: none;
+    transform: translateY(2px);
 }
 
 .button-add {
@@ -128,7 +148,7 @@ button {
 /* Listas */
 ul {
     list-style-type: none;
-    color: var(--color-text);
+    color: #000000;
     font-family: "Inter", sans-serif;
     font-size: 18px;
     margin: 20px 0;
@@ -136,7 +156,7 @@ ul {
 
 .result-list {
     margin-top: 15px;
-    color: #05DF05;
+    color: #000000;
     font-size: 22px;
     font-weight: bold;
     text-align: center;

@@ -11,6 +11,7 @@ function adicionarAmigo() {
         let novoItemLista = document.createElement("li");
         novoItemLista.textContent = document.getElementById("amigo").value;
         document.getElementById("listaAmigos").appendChild(novoItemLista);
+        document.getElementById("amigo").value = "";
     }
 }
 
